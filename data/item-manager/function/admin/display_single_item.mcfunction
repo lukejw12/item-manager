@@ -1,0 +1,2 @@
+$data modify storage item-manager:temp current_item_id set from storage item-manager:categories list.$(current_category)[$(item_index)]
+function item-manager:admin/show_item_entry with storage item-manager:temp

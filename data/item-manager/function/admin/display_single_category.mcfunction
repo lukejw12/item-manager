@@ -1,0 +1,2 @@
+$data modify storage item-manager:temp display_category set from storage item-manager:display categories[$(display_index)]
+function item-manager:admin/show_category_entry with storage item-manager:temp

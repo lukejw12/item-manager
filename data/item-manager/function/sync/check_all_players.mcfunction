@@ -1,0 +1,1 @@
+execute as @a[scores={item_manager.needs_sync=1..}] run function item-manager:sync/check_player_sync

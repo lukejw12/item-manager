@@ -1,0 +1,1 @@
+$data modify storage item-manager:categories list.$(deleted_item_category) set value []

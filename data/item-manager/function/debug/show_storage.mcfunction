@@ -1,0 +1,5 @@
+tellraw @s [{"text":"\n===== DEBUG: STORAGE CONTENTS =====","color":"red","bold":true}]
+tellraw @s [{"text":"Cached Items: ","color":"gray"},{"nbt":"items","storage":"item-manager:cache","color":"yellow"}]
+tellraw @s [{"text":"Metadata: ","color":"gray"},{"nbt":"items","storage":"item-manager:metadata","color":"yellow"}]
+tellraw @s [{"text":"Categories: ","color":"gray"},{"nbt":"list","storage":"item-manager:categories","color":"yellow"}]
+tellraw @s [{"text":"=====================================","color":"red","bold":true}]

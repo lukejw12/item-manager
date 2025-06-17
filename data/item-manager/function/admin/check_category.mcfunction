@@ -1,0 +1,2 @@
+$data modify storage item-manager:temp current_category set from storage item-manager:temp category_list[$(current_category_index)]
+function item-manager:admin/process_single_category with storage item-manager:temp

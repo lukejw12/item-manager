@@ -1,0 +1,1 @@
+function item-manager:cache_item {name:"Test Sword",id:"test_sword",sort:"Weapons",data_key:"test_id"}

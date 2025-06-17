@@ -1,0 +1,1 @@
+execute store result score #total_cached_items item_manager.counter run data get storage item-manager:cache items

@@ -1,0 +1,15 @@
+{
+	"pack": {
+		"pack_format": 71,
+		"description": [
+			{
+				"text": "Item Manager",
+				"color": "gold"
+			},
+			{
+				"text": "Easily modify custom items, and update all inventories in real-time!! Created by @_itsjustluke!",
+				"color": "yellow"
+			}
+		]
+	}
+}

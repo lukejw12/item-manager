@@ -1,0 +1,2 @@
+$execute store result score #category_count item_manager.counter if data storage item-manager:categories list.$(current_category)[]
+execute if score #category_count item_manager.counter matches 1.. run function item-manager:admin/add_category_to_display with storage item-manager:temp
