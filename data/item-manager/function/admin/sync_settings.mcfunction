@@ -3,7 +3,6 @@ $execute unless data storage item-manager:metadata items.$(id).sync_mode run dat
 $execute unless data storage item-manager:metadata items.$(id).sync_interval run data modify storage item-manager:metadata items.$(id).sync_interval set value 5
 $data modify storage item-manager:temp current_sync_mode set from storage item-manager:metadata items.$(id).sync_mode
 $data modify storage item-manager:temp current_sync_interval set from storage item-manager:metadata items.$(id).sync_interval
-
 tellraw @s [{"text":"Current Mode: ","color":"gray"},{"nbt":"current_sync_mode","storage":"item-manager:temp","color":"white"},{"text":" | Interval: ","color":"gray"},{"nbt":"current_sync_interval","storage":"item-manager:temp","color":"white"},{"text":"t","color":"gray"}]
 
 tellraw @s [{"text":"","color":"gray"}]

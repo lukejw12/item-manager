@@ -1,4 +1,3 @@
-tellraw @s [{"text":"CURSOR SYNC CALLED","color":"red","bold":true}]
 $execute if data storage item-manager:cache items.$(target_id) run data modify storage item-manager:temp sync_item set from storage item-manager:cache items.$(target_id)
 $execute if data storage item-manager:cache items.$(target_id) run data modify storage item-manager:temp target_id set value "$(target_id)"
 $execute if data storage item-manager:cache items.$(target_id) run function item-manager:player/check_cursor_sync
