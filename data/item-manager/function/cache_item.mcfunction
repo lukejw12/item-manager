@@ -26,5 +26,7 @@ $data modify storage item-manager:categories list.$(sort) append value "$(id)"
 
 data modify storage item-manager:cache items.$(id).components.minecraft:custom_data.item_version set from storage item-manager:temp current_version
 
+execute unless data storage item-manager:sync cached_item_list run data modify storage item-manager:sync cached_item_list set value []
+$data modify storage item-manager:sync cached_item_list append value {id:"$(id)"}
+
 $tellraw @s [{"text":"✅ Cached item: ","color":"green"},{"text":"$(name)","color":"aqua"},{"text":" (ID: $(id), Category: $(sort))","color":"gray"}]
-function item-manager:admin/admin_menu

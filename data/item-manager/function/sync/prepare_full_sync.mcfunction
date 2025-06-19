@@ -1,1 +1,0 @@
-tellraw @s [{"text":"🔄 Syncing all cached items...","color":"yellow"}]

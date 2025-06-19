@@ -1,0 +1,2 @@
+$execute if data storage item-manager:cache items.$(target_id) run data modify storage item-manager:temp sync_item set from storage item-manager:cache items.$(target_id)
+$execute if data storage item-manager:cache items.$(target_id) run function item-manager:player/check_hotbar_sync with storage item-manager:temp

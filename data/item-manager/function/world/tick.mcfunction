@@ -4,3 +4,6 @@ execute if score #queue_size item_manager.counter matches 1.. run function item-
 scoreboard players add #sync_timer item_manager.counter 1
 execute if score #sync_timer item_manager.counter matches 100.. run function item-manager:sync/check_all_players
 execute if score #sync_timer item_manager.counter matches 100.. run scoreboard players set #sync_timer item_manager.counter 0
+
+scoreboard players add #continuous_sync_timer item_manager.counter 1
+execute as @a run function item-manager:sync/check_all_cached_items_for_player

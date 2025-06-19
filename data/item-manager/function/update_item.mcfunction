@@ -10,12 +10,17 @@ function item-manager:utils/check_item_data_key with storage item-manager:temp
 scoreboard players add #version_counter item_manager.counter 1
 execute store result storage item-manager:temp current_version int 1 run scoreboard players get #version_counter item_manager.counter
 
+tellraw @s [{"text":"DEBUG: New version will be ","color":"yellow"},{"nbt":"current_version","storage":"item-manager:temp","color":"white"}]
+
 $data modify storage item-manager:cache items.$(id) set from entity @s SelectedItem
-data modify storage item-manager:metadata items.$(id).version set from storage item-manager:temp current_version
+$data modify storage item-manager:metadata items.$(id).version set from storage item-manager:temp current_version
 execute store result storage item-manager:metadata items.$(id).updated_time long 1 run time query gametime
 data modify storage item-manager:metadata items.$(id).updated_by set from entity @s UUID
 
-data modify storage item-manager:cache items.$(id).components.minecraft:custom_data.item_version set from storage item-manager:temp current_version
+$data modify storage item-manager:cache items.$(id).components.minecraft:custom_data.item_version set from storage item-manager:temp current_version
+
+$tellraw @s [{"text":"DEBUG: Stored version in metadata: ","color":"yellow"},{"nbt":"items.$(id).version","storage":"item-manager:metadata","color":"white"}]
+$tellraw @s [{"text":"DEBUG: Stored version in cached item: ","color":"yellow"},{"nbt":"items.$(id).components.minecraft:custom_data.item_version","storage":"item-manager:cache","color":"white"}]
 
 $data modify storage item-manager:temp target_id set value "$(id)"
 data modify storage item-manager:temp sync_item set from entity @s SelectedItem
@@ -25,4 +30,3 @@ execute as @a run function item-manager:player/check_inventory_sync with storage
 execute as @a run scoreboard players set @s item_manager.needs_sync 1
 
 $tellraw @s [{"text":"✅ Updated item: ","color":"green"},{"text":"$(id)","color":"aqua"},{"text":" and synced to all online players","color":"gray"}]
-function item-manager:admin/admin_menu

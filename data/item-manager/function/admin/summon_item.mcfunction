@@ -1,0 +1,1 @@
+$summon minecraft:item ~ ~ ~ {Item:$(spawn_item),PickupDelay:0s}

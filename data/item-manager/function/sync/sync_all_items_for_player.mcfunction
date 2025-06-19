@@ -1,2 +1,1 @@
 execute store result score #cached_count item_manager.counter run data get storage item-manager:cache items
-execute if score #cached_count item_manager.counter matches 1.. run function item-manager:sync/prepare_full_sync

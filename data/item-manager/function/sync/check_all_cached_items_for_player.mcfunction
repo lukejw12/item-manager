@@ -1,0 +1,2 @@
+execute store result score #has_cached_items item_manager.counter run data get storage item-manager:cache items
+execute if score #has_cached_items item_manager.counter matches 1.. run function item-manager:sync/check_player_for_all_items
