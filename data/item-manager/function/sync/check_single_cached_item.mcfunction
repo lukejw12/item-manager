@@ -7,7 +7,8 @@ $execute store result score #sync_interval item_manager.counter run data get sto
 execute store success score #is_disabled item_manager.counter run data modify storage item-manager:temp sync_mode set value "disabled"
 execute if score #is_disabled item_manager.counter matches 0 run return 0
 
-execute store result score #timer_mod item_manager.counter run scoreboard players operation #continuous_sync_timer item_manager.counter % #sync_interval item_manager.counter
+scoreboard players operation #timer_mod item_manager.counter = #continuous_sync_timer item_manager.counter
+scoreboard players operation #timer_mod item_manager.counter %= #sync_interval item_manager.counter
 execute unless score #timer_mod item_manager.counter matches 0 run return 0
 
 execute store success score #is_cursor item_manager.counter run data modify storage item-manager:temp sync_mode set value "cursor"

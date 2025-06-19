@@ -12,6 +12,7 @@ execute unless data storage item-manager:temp data run data modify storage item-
 execute unless data storage item-manager:display categories run data modify storage item-manager:display categories set value []
 execute unless data storage item-manager:sync cached_item_list run data modify storage item-manager:sync cached_item_list set value []
 
+scoreboard players set #-1 item_manager.counter -1
 scoreboard players set #1 item_manager.counter 1
 scoreboard players set #9 item_manager.counter 9
 scoreboard players set #27 item_manager.counter 27
