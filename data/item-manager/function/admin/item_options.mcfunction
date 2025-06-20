@@ -1,4 +1,4 @@
-$tellraw @s [{"text":"\n===== $(id) OPTIONS =====","color":"gold","bold":true}]
+$tellraw @s [{"text":"===== $(id) OPTIONS =====","color":"gold","bold":true}]
 $data modify storage item-manager:temp option_item_name set from storage item-manager:metadata items.$(id).name
 tellraw @s [{"text":"Item: ","color":"gray"},{"nbt":"option_item_name","storage":"item-manager:temp","color":"aqua"}]
 $tellraw @s [{"text":"🔄 Update Item","color":"blue","click_event":{"action":"suggest_command","command":"/function item-manager:update_item {id:\"$(id)\"}"},"hover_event":{"action":"show_text","value":"Update this item with the item in your hand"}}]

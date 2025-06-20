@@ -1,3 +1,1 @@
 give @s diamond_sword[custom_name='{"text":"Test Sword UPDATED","color":"red"}',custom_data={test_id:1b,item_version:0}]
-tellraw @s [{"text":"✅ Created updated test item. Now run:","color":"green"}]
-tellraw @s [{"text":"/function item-manager:update_item {id:\"test_sword\"}","color":"aqua","click_event":{"action":"suggest_command","command":"/function item-manager:update_item {id:\"test_sword\"}"}}]
